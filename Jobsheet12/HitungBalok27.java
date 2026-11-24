@@ -3,8 +3,19 @@ package Jobsheet12;
 import java.util.Scanner;
 
 public class HitungBalok27 {
+    static int hitungLuas(int pjg, int lb) {
+        int Luas = pjg * lb;
+        return Luas;
+    }
+
+    static int hitungVolume(int tinggi, int a, int b) {
+        int volume = hitungLuas(a, b) * tinggi;
+        return volume;
+    }
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+
         int p, l, t, L, vol;
 
         System.out.println("Masukkan panjang");
@@ -16,11 +27,11 @@ public class HitungBalok27 {
         System.out.println("Masukkan tinggi");
         t = input.nextInt();
 
-        L = p * l;
-        System.out.println("Luas persegi panjang adalah " + L);
-        vol = p * l * t;
-        System.out.println("Volume balok adalah " + vol);
+        L = hitungLuas(p, l);
+        System.out.println("Luas Persegi Panjang adalah " + L);
 
+        vol = hitungVolume(t, p, l);
+        System.out.println("Volume Balok adalah " + vol);
         input.close();
     }
 }
