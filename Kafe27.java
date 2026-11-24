@@ -1,7 +1,8 @@
 package Jobsheet12;
 
-public class Kafe27 {
+import java.util.Scanner;
 
+public class Kafe27 {
     public static void Menu(String namaPelanggan, boolean isMember) {
         System.out.println("Selamat datang, " + namaPelanggan + "!");
 
@@ -21,14 +22,24 @@ public class Kafe27 {
         System.out.println("Silakan pilih menu yang Anda inginkan.");
     }
 
-    public static void ubahNama(String nama) {
-        nama = "Tamu";
-        System.out.println("Di dalam fungsi: " + nama);
+    public static int hitungTotalHarga27(int pilihanMenu, int banyakItem) {
+        int[] hargaItems = {15000, 20000, 22000, 12000, 10000, 18000};
+
+        int hargaTotal = hargaItems[pilihanMenu - 1] * banyakItem;
+        return hargaTotal;
     }
 
     public static void main(String[] args) {
-        String nama = "Andi";
-        ubahNama(nama);
-        System.out.println("Di main: " + nama);
+        Scanner sc = new Scanner(System.in);
+        Menu("Andi", true);
+
+        System.out.print("\nMasukkan nomor menu yang ingin Anda pesan: ");
+        int pilihanMenu = sc.nextInt();
+        System.out.print("Masukkan jumlah item yang ingin dipesan: ");
+        int banyakItem = sc.nextInt();
+
+        int totalBayar = hitungTotalHarga27(pilihanMenu, banyakItem);
+
+        System.out.println("Total harga untuk pesanan Anda: Rp" + totalBayar);
     }
 }
