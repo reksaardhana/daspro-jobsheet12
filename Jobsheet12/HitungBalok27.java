@@ -30,7 +30,7 @@ public class HitungBalok27 {
         L = hitungLuas(p, l);
         System.out.println("Luas Persegi Panjang adalah " + L);
 
-        vol = hitungVolume(t, p, l);
+        vol = hitungVolume(p, l, t);
         System.out.println("Volume Balok adalah " + vol);
         input.close();
     }
