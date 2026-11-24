@@ -21,6 +21,6 @@ public class Kafe27 {
     }
 
     public static void main(String[] args) {
-        Menu("Andi", true);
+        Menu("Budi", false);
     }
 }
