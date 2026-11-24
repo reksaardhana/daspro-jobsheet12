@@ -1,15 +1,19 @@
 package Jobsheet12;
 
 public class PengunjungCafe27 {
-    static void daftarPengunjung(String... namaPengunjung, int... nomorMeja) {
-        System.out.println("Meja nomor " + nomorMeja);
-        System.out.println("Daftar Nama Pengunjung:");
-        for (String nama : namaPengunjung) {
-            System.out.println("- " + nama);
+    static int hitungTotalBelanja(int... harga) {
+        int total = 0;
+        for (int h : harga) {
+            total += h;
         }
+        return total;
     }
 
     public static void main(String[] args) {
-        daftarPengunjung("Ali", "Budi", "Citra");
+        System.out.println("1 argumen : " + hitungTotalBelanja(15000));
+        System.out.println("3 argumen : "
+                + hitungTotalBelanja(15000, 20000, 22000));
+        System.out.println("5 argumen : "
+                + hitungTotalBelanja(15000, 20000, 22000, 12000, 10000));
     }
 }
