@@ -38,8 +38,8 @@ public class Kafe27 {
         System.out.print("Masukkan jumlah item yang ingin dipesan: ");
         int banyakItem = sc.nextInt();
 
-        int totalBayar = hitungTotalHarga27(pilihanMenu, banyakItem);
+        hitungTotalHarga27(pilihanMenu, banyakItem);
 
-        System.out.println("Total harga untuk pesanan Anda: Rp" + totalBayar);
+        System.out.println("Pesanan diproses, total tidak disimpan.");
     }
 }
