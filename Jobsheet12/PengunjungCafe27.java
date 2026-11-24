@@ -1,7 +1,7 @@
 package Jobsheet12;
 
 public class PengunjungCafe27 {
-    static void daftarPengunjung(int nomorMeja, String... namaPengunjung) {
+    static void daftarPengunjung(String... namaPengunjung, int nomorMeja) {
         System.out.println("Meja nomor " + nomorMeja);
         System.out.println("Daftar Nama Pengunjung:");
         for (String nama : namaPengunjung) {
@@ -10,6 +10,6 @@ public class PengunjungCafe27 {
     }
 
     public static void main(String[] args) {
-        daftarPengunjung(5, "Ali", "Budi", "Citra");
+        daftarPengunjung("Ali", "Budi", "Citra");
     }
 }
